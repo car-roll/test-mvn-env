@@ -5,7 +5,7 @@ builds['windows'] = {
         withEnv(['SKIP=true']) {
             checkout scm
             sh 'echo $SKIP'
-            sh 'mvn clean install'
+            sh 'mvn compile'
         }
     }
 }
