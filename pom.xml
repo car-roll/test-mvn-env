@@ -72,7 +72,7 @@
                                 <id>run-script</id>
                                 <phase>compile</phase>
                                 <goals>
-                                    <goal>run</goal>
+                                    <goal>exec</goal>
                                 </goals>
                             </execution>
                         </executions>
