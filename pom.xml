@@ -54,7 +54,7 @@
             <id>my-profile</id>
             <activation>
                 <property>
-                    <name>env.SKIP</name>
+                    <name>SKIP</name>
                     <value>!true</value>
                 </property>
             </activation>
