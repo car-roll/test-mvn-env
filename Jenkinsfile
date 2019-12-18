@@ -3,9 +3,9 @@ def builds = [:]
 builds['windows'] = {
     node {
         withEnv(['SKIP=true']) {
-            checkout scm
+            //checkout scm
             sh 'echo $SKIP'
-            sh 'mvn compile'
+            //sh 'mvn compile'
         }
     }
 }
