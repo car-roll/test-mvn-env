@@ -1,4 +1,4 @@
 #! /bin/sh
 
-echo 'hello'
-echo 'bye'
+echo 'hello!'
+echo 'bye!'
