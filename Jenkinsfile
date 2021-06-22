@@ -16,6 +16,7 @@ script {
         checkout scm
 //         def val = tm('${JSON, file="sample.json", expr="$.store.book[?(@.title == 'Moby Dick')].price"}')
         def val = tm('${JSON, file="sample.json", expr="$.store.book[?(@.price < 5)].price"}')
-        echo "debug: $val"
+        prettyJSON = JsonOutput.prettyPrint(val)
+        echo "${prettyJSON}"
     }
 }
