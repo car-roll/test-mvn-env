@@ -1,12 +1,20 @@
-def builds = [:]
+// def builds = [:]
 
-builds['windows'] = {
+// builds['windows'] = {
+//     node {
+//         withEnv(['SKIP=true']) {
+//             checkout scm
+//             sh 'echo $SKIP'
+//             sh 'mvn compile'
+//         }
+//     }
+// }
+// parallel builds
+
+script {
     node {
-        withEnv(['SKIP=true']) {
-            checkout scm
-            sh 'echo $SKIP'
-            sh 'mvn compile'
-        }
+        checkout scm
+        def val = tm('${JSON, file=".sample.json", path="debug"}')
+        echo "debug: ${val}"
     }
 }
-parallel builds
