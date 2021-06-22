@@ -14,7 +14,7 @@
 script {
     node {
         checkout scm
-        def val = tm('${JSON, file="sample.json", path="-.store"}')
+        def val = tm('${JSON, file="sample.json", path="$.store.book[?(@.price < 10)].title"}')
         echo "debug: $val"
     }
 }
