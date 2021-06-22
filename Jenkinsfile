@@ -17,7 +17,7 @@ script {
 //         def val = tm('${JSON, file="sample.json", expr="$.store.book[?(@.title == 'Moby Dick')].price"}')
 //         def val = tm('${JSON, file="sample.json", expr="$.store.book[?(@.price < 5)].price"}')
 //         def val = tm('${JSON, file="sample.json", expr="$.project[version]"}')
-        def val = tm('${JSON, file="sample.json", expr="project.2e+"}')
+        def val = tm('${JSON, file="sample.json", expr="project.val"}')
         echo "${val}"
 //         def prettyJSON = JsonOutput.prettyPrint(val)
 //         def prettyJSON = JsonOutput.prettyPrint(tm('${JSON, file="sample.json", expr="$.store.book[?(@.price < 5)].price"}'))
